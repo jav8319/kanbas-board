@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
 import initialData from './initialData';
+import loadFromLocalStorage from './utils/loaddata.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
@@ -9,9 +10,46 @@ import './style.css'
 
 function App() {
   const [data, setData] = useState(initialData);
+  
+  useEffect(() => {
+    
+    const savedData = loadFromLocalStorage();
+  
+    if (savedData===null) {
+      
+      return
+      
+    }else{
+      setData(savedData);
+    }
+  }, []);
+
+
+  useEffect(() => {
+    
+     
+    const savedata=  JSON.stringify(data);
+    if(savedata===null){
+      return
+    }else{
+      localStorage.setItem('myData', savedata);
+
+    }
+
+
+
+    
+  },[data] );
+
+  
+
+
+
+
 
   const columnTasks = {};
   for (const columnId of data.columnOrder) {
+   
     columnTasks[columnId] = data.columns[columnId].taskIds.map(taskId => data.tasks[taskId]);
   }
 
@@ -40,6 +78,8 @@ function App() {
           [newColumn.id]: newColumn,
         },
       });
+      
+
     } else {
       const sourceColumn = data.columns[source.droppableId];
       const destColumn = data.columns[destination.droppableId];
@@ -65,6 +105,10 @@ function App() {
           [newDestColumn.id]: newDestColumn,
         },
       });
+     
+
+      
+
     }
   }
 
