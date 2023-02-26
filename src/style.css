@@ -7,11 +7,15 @@ min-height: 100vh;
 .custom2{
 background-color: rgb(191, 255, 127);
 font-weight: bolder;
+width: 350px;
 }
 .custom3{
 background-color: rgb(172, 127, 255);
 font-weight: bolder;
+height: 50px;
+font-size: 30px;
 }
 .custom4{
-border:solid black
+border:solid black;
+font-size: 25px;
 }

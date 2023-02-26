@@ -71,11 +71,11 @@ function App() {
   return (
     <div className='container-fluid custom1'>
           
-      <div className='d-flex justify-content-center'>
+      <div className='d-flex p-3 justify-content-center'>
           <h1>My Kanban board</h1>
       </div>
  
-      <div className='d-flex flex-wrap justify-content-center'>
+      <div className='d-flex flex-wrap justify-content-center p-2'>
           <DragDropContext onDragEnd={onDragEnd}>
       {data.columnOrder.map((columnId) => (
         <Column key={data.columns[columnId].id} column={data.columns[columnId]} tasks={columnTasks[columnId]} />
