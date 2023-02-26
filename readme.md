@@ -10,7 +10,7 @@
 
 ## Description  
 
-A kanban board where tasks can be moved between columns, data can be easily modify by editing the "initialData component"  
+A kanban board where tasks can be moved between columns, data can be easily modify by editing the "initialData" component  
 
 ## Installation  
 
@@ -18,7 +18,7 @@ to install it and run it use node 16.15.1
 
 ## Usage  
 
-To move the tasks, move the mouse over the , then hold left click and drag it where you want to relocate it,then release left click to drop it  
+To move the tasks, move the mouse over the task, then hold left click and drag it where you want to relocate it,then release left click to drop it  
 
 
 ## Questions  
