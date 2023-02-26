@@ -1,24 +1,7 @@
 import React, { useState } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
-
-const initialData = {
-  tasks: {
-    'task-1': { id: 'task-1', content: 'Take out the garbage' },
-    'task-2': { id: 'task-2', content: 'Watch my favorite show' },
-    'task-3': { id: 'task-3', content: 'Charge my phone' },
-    'task-4': { id: 'task-4', content: 'Cook dinner' },
-    
-  },
-  columns: {
-    'column-1': {
-      id: 'column-1',
-      title: 'To do',
-      taskIds: ['task-1', 'task-2', 'task-3', 'task-4'],
-    },
-  },
-  columnOrder: ['column-1', 'colum-2'],
-};
+import initialData from './initialData';
 
 function App() {
   const [data, setData] = useState(initialData);
@@ -27,27 +10,71 @@ function App() {
   for (const columnId of data.columnOrder) {
     columnTasks[columnId] = data.columns[columnId].taskIds.map(taskId => data.tasks[taskId]);
   }
-  
+
   const onDragEnd = (result) => {
-      
+    const { source, destination } = result;
+
+    if (!destination) {
+      return;
+    }
+
+    if (source.droppableId === destination.droppableId) {
+      const column = data.columns[source.droppableId];
+      const newTaskIds = Array.from(column.taskIds);
+      const [removed] = newTaskIds.splice(source.index, 1);
+      newTaskIds.splice(destination.index, 0, removed);
+
+      const newColumn = {
+        ...column,
+        taskIds: newTaskIds,
+      };
+
+      setData({
+        ...data,
+        columns: {
+          ...data.columns,
+          [newColumn.id]: newColumn,
+        },
+      });
+    } else {
+      const sourceColumn = data.columns[source.droppableId];
+      const destColumn = data.columns[destination.droppableId];
+      const sourceTaskIds = Array.from(sourceColumn.taskIds);
+      const destTaskIds = Array.from(destColumn.taskIds);
+      const [removed] = sourceTaskIds.splice(source.index, 1);
+      destTaskIds.splice(destination.index, 0, removed);
+
+      const newSourceColumn = {
+        ...sourceColumn,
+        taskIds: sourceTaskIds,
+      };
+      const newDestColumn = {
+        ...destColumn,
+        taskIds: destTaskIds,
+      };
+
+      setData({
+        ...data,
+        columns: {
+          ...data.columns,
+          [newSourceColumn.id]: newSourceColumn,
+          [newDestColumn.id]: newDestColumn,
+        },
+      });
+    }
   }
 
-  
   return (
-    <div>
-       <DragDropContext onDragEnd={onDragEnd}>
+    <DragDropContext onDragEnd={onDragEnd}>
       {data.columnOrder.map((columnId) => (
-        <div key={columnId}>
-          <Column column={data.columns[columnId]} tasks={columnTasks[columnId]} />
-        </div>
+        <Column key={data.columns[columnId].id} column={data.columns[columnId]} tasks={columnTasks[columnId]} />
       ))}
-       </DragDropContext>
-  
-    </div>
+    </DragDropContext>
   );
 }
 
 export default App;
+
 
 
   
