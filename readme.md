@@ -23,5 +23,5 @@ To move the tasks, move the mouse over the task, then hold left click and drag i
 
 ## Questions  
 
-I can be reached at [myemail]<myportfolio@javiermp.com>, [website]<https://shielded-wave-42432.herokuapp.com/#Portfolio>, [github]https://github.com/jv8319, [myemail]<https://www.linkedin.com/in/javier-muriel-66a34b190/>
+I can be reached at [myemail]<myportfolio@javiermp.com>, [website]<https://shielded-wave-42432.herokuapp.com/#Portfolio>, [github]https://github.com/jv8319, [linkedin]<https://www.linkedin.com/in/javier-muriel-66a34b190/>
 
