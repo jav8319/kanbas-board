@@ -18,7 +18,7 @@ to install it and run it use node 16.15.1
 
 ## Usage  
 
-To move the tasks, move the mouse over the task, then hold left click and drag it where you want to relocate it,then release left click to drop it  
+To move the tasks, move the mouse over the task, then hold left click and drag it where you want to relocate it,then release left click to drop it. Please visit [linkedin] <https://jav8319.github.io/kanbas-board/> to see the published website
 
 
 ## Questions  
