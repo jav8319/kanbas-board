@@ -1,4 +1,4 @@
-import Column from "./Column";
+
 
 const initialData = {
   tasks: {
@@ -7,13 +7,13 @@ const initialData = {
     'task-3': { id: 'task-3', content: 'Charge my phone' },
     'task-4': { id: 'task-4', content: 'Cook dinner' },
     'task-5': { id: 'task-5', content: 'cook beans' },
-    'task-6': { id: 'task-6', content: 'Watch rrrrrrrrrrrr' },
-    'task-7': { id: 'task-7', content: 'cccccccc' },
-    'task-8': { id: 'task-8', content: 'tttttttttttttt' },
-    'task-9': { id: 'task-9', content: 'gggggggggggg' },
-    'task-10': { id: 'task-10', content: 'vvvvvvvvvvvvvvvv' },
-    'task-11': { id: 'task-11', content: '11111111111111111' },
-    'task-12': { id: 'task-12', content: '3333333333333' },
+    'task-6': { id: 'task-6', content: 'Watch tv' },
+    'task-7': { id: 'task-7', content: 'cook breakfast' },
+    'task-8': { id: 'task-8', content: 'read book' },
+    'task-9': { id: 'task-9', content: 'have lunch' },
+    'task-10': { id: 'task-10', content: 'go to bed' },
+    'task-11': { id: 'task-11', content: 'workout' },
+    'task-12': { id: 'task-12', content: 'watch news' },
   },
   columns: {
     'column-1': {
@@ -23,12 +23,12 @@ const initialData = {
     },
     'column-2': {
       id: 'column-2',
-      title: 'To do',
+      title: 'In Progress',
       taskIds: ['task-12', 'task-5', 'task-6', 'task-7'],
     },
     'column-3': {
       id: 'column-3',
-      title: 'To do',
+      title: 'Pending',
       taskIds: ['task-8', 'task-9', 'task-10', 'task-11'],
     },
 

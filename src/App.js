@@ -3,6 +3,10 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
 import initialData from './initialData';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css'
+
+
 function App() {
   const [data, setData] = useState(initialData);
 
@@ -65,11 +69,25 @@ function App() {
   }
 
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
+    <div className='container-fluid custom1'>
+          
+      <div className='d-flex justify-content-center'>
+          <h1>My Kanban board</h1>
+      </div>
+ 
+      <div className='d-flex flex-wrap justify-content-center'>
+          <DragDropContext onDragEnd={onDragEnd}>
       {data.columnOrder.map((columnId) => (
         <Column key={data.columns[columnId].id} column={data.columns[columnId]} tasks={columnTasks[columnId]} />
       ))}
     </DragDropContext>
+    </div>
+
+  
+    </div>
+
+
+
   );
 }
 

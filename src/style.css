@@ -1,0 +1,17 @@
+
+
+.custom1 {
+background-color: aquamarine;
+min-height: 100vh;
+}
+.custom2{
+background-color: rgb(191, 255, 127);
+font-weight: bolder;
+}
+.custom3{
+background-color: rgb(172, 127, 255);
+font-weight: bolder;
+}
+.custom4{
+border:solid black
+}
