@@ -47,6 +47,33 @@ function App() {
 
 
 
+  const addTask = (columnId, content) => {
+    const newTaskId = `task-${Date.now()}`;
+    const column = data.columns[columnId];
+    setData({
+      ...data,
+      tasks: { ...data.tasks, [newTaskId]: { id: newTaskId, content } },
+      columns: {
+        ...data.columns,
+        [columnId]: { ...column, taskIds: [...column.taskIds, newTaskId] }
+      }
+    });
+  };
+
+  const deleteTask = (taskId, columnId) => {
+    const column = data.columns[columnId];
+    const newTasks = { ...data.tasks };
+    delete newTasks[taskId];
+    setData({
+      ...data,
+      tasks: newTasks,
+      columns: {
+        ...data.columns,
+        [columnId]: { ...column, taskIds: column.taskIds.filter(id => id !== taskId) }
+      }
+    });
+  };
+
   const columnTasks = {};
   for (const columnId of data.columnOrder) {
    
@@ -122,7 +149,7 @@ function App() {
       <div className='d-flex flex-wrap justify-content-center p-2'>
           <DragDropContext onDragEnd={onDragEnd}>
       {data.columnOrder.map((columnId) => (
-        <Column key={data.columns[columnId].id} column={data.columns[columnId]} tasks={columnTasks[columnId]} />
+        <Column key={data.columns[columnId].id} column={data.columns[columnId]} tasks={columnTasks[columnId]} onAddTask={addTask} onDeleteTask={deleteTask} />
       ))}
     </DragDropContext>
     </div>
