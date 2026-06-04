@@ -153,6 +153,7 @@ function App() {
       ))}
     </DragDropContext>
     </div>
+    
 <Footer/>
   
     </div>
