@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d40fbe0bf2850d04b9c129467e3a64d3",
+    "revision": "5830751d80fd68fb442a522329394b70",
     "url": "/kanbas-board/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kanbas-board/static/css/2.7f1403ef.chunk.css"
   },
   {
-    "revision": "1b5699d2fca10524f071",
-    "url": "/kanbas-board/static/css/main.894e8e09.chunk.css"
+    "revision": "f5ce3adebe40ddf05e20",
+    "url": "/kanbas-board/static/css/main.fadfe3de.chunk.css"
   },
   {
     "revision": "2615cdf0d3352f8a4181",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kanbas-board/static/js/2.d850aa73.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1b5699d2fca10524f071",
+    "revision": "f5ce3adebe40ddf05e20",
     "url": "/kanbas-board/static/js/main.ca9ab462.chunk.js"
   },
   {

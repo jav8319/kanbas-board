@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/kanbas-board/static/css/main.894e8e09.chunk.css",
+    "main.css": "/kanbas-board/static/css/main.fadfe3de.chunk.css",
     "main.js": "/kanbas-board/static/js/main.ca9ab462.chunk.js",
     "main.js.map": "/kanbas-board/static/js/main.ca9ab462.chunk.js.map",
     "runtime-main.js": "/kanbas-board/static/js/runtime-main.3e7d6ccc.js",
@@ -9,17 +9,17 @@
     "static/js/2.d850aa73.chunk.js": "/kanbas-board/static/js/2.d850aa73.chunk.js",
     "static/js/2.d850aa73.chunk.js.map": "/kanbas-board/static/js/2.d850aa73.chunk.js.map",
     "index.html": "/kanbas-board/index.html",
-    "precache-manifest.a7cb511951997e09e4100822c0883281.js": "/kanbas-board/precache-manifest.a7cb511951997e09e4100822c0883281.js",
+    "precache-manifest.089346bc09125cf88600296bbde76b28.js": "/kanbas-board/precache-manifest.089346bc09125cf88600296bbde76b28.js",
     "service-worker.js": "/kanbas-board/service-worker.js",
     "static/css/2.7f1403ef.chunk.css.map": "/kanbas-board/static/css/2.7f1403ef.chunk.css.map",
-    "static/css/main.894e8e09.chunk.css.map": "/kanbas-board/static/css/main.894e8e09.chunk.css.map",
+    "static/css/main.fadfe3de.chunk.css.map": "/kanbas-board/static/css/main.fadfe3de.chunk.css.map",
     "static/js/2.d850aa73.chunk.js.LICENSE.txt": "/kanbas-board/static/js/2.d850aa73.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3e7d6ccc.js",
     "static/css/2.7f1403ef.chunk.css",
     "static/js/2.d850aa73.chunk.js",
-    "static/css/main.894e8e09.chunk.css",
+    "static/css/main.fadfe3de.chunk.css",
     "static/js/main.ca9ab462.chunk.js"
   ]
 }
