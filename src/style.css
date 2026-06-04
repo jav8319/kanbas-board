@@ -30,7 +30,8 @@ h1 {
       rgba(0, 0, 0, 0.12) 39px,
       rgba(0, 0, 0, 0.12) 40px
     );
-  min-height: 110vh;
+  min-height: 100vh;
+  padding-bottom: 80px;
 }
 
 /* Column container — warm parchment */
