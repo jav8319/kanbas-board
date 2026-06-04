@@ -74,6 +74,16 @@ h1 {
   background-color: #fff8e1;
 }
 
+.drag-hint {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: -8px 0 12px;
+  letter-spacing: 0.5px;
+}
+
 .footerdiv {
    position: fixed;
   bottom: 0;

@@ -145,6 +145,7 @@ function App() {
       <div className='d-flex p-3 justify-content-center'>
           <h1>My Kanban board</h1>
       </div>
+      <p className='drag-hint'>✦ Hold and drag any task card to move it between columns</p>
  
       <div className='d-flex flex-wrap justify-content-center p-2'>
           <DragDropContext onDragEnd={onDragEnd}>
