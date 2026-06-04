@@ -3,7 +3,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import Column from './Column';
 import initialData from './initialData';
 import loadFromLocalStorage from './utils/loaddata.js';
-
+import Footer from "./components/footer.js"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
 
@@ -153,7 +153,7 @@ function App() {
       ))}
     </DragDropContext>
     </div>
-
+<Footer/>
   
     </div>
 
